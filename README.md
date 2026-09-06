@@ -14,21 +14,24 @@ Azerbaijani café website and QR-friendly digital menu. Next.js App Router, stri
 
 ## Owner updates
 
-- `src/config/business.ts`: verified address, map URL, telephone, hours, official logo and founding year. Unknown values stay null. The founding-year badge is deliberately omitted until confirmed. Pet-friendly identity comes from the supplied brief.
+- `src/config/business.ts`: centralized address, map URL, telephone, hours, coordinates and founding year. The official logo can be added there when supplied.
 - `src/data/menu.ts`: categories and menu records. Replace the clearly marked demonstration dataset and set `isDemo` to false only after owner verification. Prices are numbers in AZN; null means pending. Variants, allergens, tags, images and availability are supported. Unavailable items stay visible.
 - `src/types/menu.ts`: record structure.
 - `src/components/brand.tsx`: isolated temporary text wordmark. The favicon and social card are also temporary branding.
 - `src/app/globals.css`: shared tokens and responsive layouts.
 - `NEXT_PUBLIC_SITE_URL`: optional canonical origin override at build time.
 
-Business details are not invented. Current item names and availability are demonstrations, not an actual café menu. No demonstration prices are published. Featured products remain a friendly pending state. Structured data contains only supplied facts; verified menu records are included only once demo mode is disabled.
+Business details were checked on 7 September 2026. The current 28 May location is shown because it agrees with the Instagram profile and current map listing. Current item names and availability are demonstrations, not an actual café menu. No demonstration prices are published. Featured products remain a friendly pending state.
 
 ## Photography
 
-No local café assets were supplied and Instagram could not be accessed. Photos are locally stored illustrative stock images, visibly labeled; they do not depict Kafe Sərçə. Replace all three with owner-supplied photos before public launch. Free use/modification permitted under https://www.pexels.com/license/; no endorsement implied.
+The real exterior and branded-cup photographs come from the current Kafe Sərçə Yandex Maps listing and are stored locally rather than hotlinked. Two atmospheric images remain clearly labeled Pexels stock photographs. Replace any third-party photograph with owner-supplied originals when available.
+
+- Current place listing and real photos: https://yandex.az/maps/org/30006629847/
+- Current address, phone and hours corroboration: https://yandex.az/maps/10253/baku/house/YEAYfgNjTEUOQFpqfX95dH5mZQ%3D%3D/
+- Instagram profile: https://www.instagram.com/kafe.serche/
 
 - Volkan Buyukvardar: https://www.pexels.com/photo/modern-green-interior-design-of-cafe-14614776/
-- Hafize Balcı: https://www.pexels.com/photo/cappuccino-in-cup-on-saucer-19334822/
 - Ebahir: https://www.pexels.com/photo/vintage-coffee-and-books-on-wooden-table-28571292/
 
 ## Verification

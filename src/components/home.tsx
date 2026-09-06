@@ -49,14 +49,15 @@ export function Hero() {
         <div className="coffee-polaroid">
           <div>
             <Image
-              src="/images/coffee-detail.jpg"
-              alt="Taxta masada kapuçino — illüstrativ foto"
+              src="/images/serche-cup.jpg"
+              alt="Kafe Sərçənin sərçə nişanlı qəhvə stəkanı"
               fill
               sizes="(max-width:700px) 130px,210px"
             />
           </div>
-          <span>Günün kiçik fasiləsi.</span>
+          <span>Hər fincanda bir Sərçə.</span>
         </div>
+        <span className="since-label">SINCE {business.founded}</span>
         <div className="pet-stamp">
           <PawPrint size={23} />
           <span>
@@ -186,19 +187,22 @@ export function EditorialGallery() {
       <div className="gallery">
         {[
           {
-            src: "coffee-detail",
-            caption: "Bir fincanlıq fasilə",
-            alt: "Taxta masa üzərində kapuçino",
+            src: "serche-cup",
+            caption: "Hər fincanda bir Sərçə",
+            alt: "Kafe Sərçənin sərçə nişanlı qəhvə stəkanı",
+            real: true,
           },
           {
             src: "cafe-interior",
             caption: "Öz küncünü tap",
             alt: "Yaşıl kafedə taxta stullar və masalar",
+            real: false,
           },
           {
-            src: "books-table",
-            caption: "Bir səhifə də oxu",
-            alt: "Kitab və fincanlarla taxta masa",
+            src: "serche-exterior",
+            caption: "28 Mayda bizi tap",
+            alt: "Kafe Sərçənin Vladislav Plotnikov küçəsindəki fasadı",
+            real: true,
           },
         ].map((photo) => (
           <Reveal key={photo.src} className="gallery-frame">
@@ -206,14 +210,15 @@ export function EditorialGallery() {
               src={`/images/${photo.src}.jpg`}
               fill
               sizes="(max-width:700px) 75vw,33vw"
-              alt={`${photo.alt} — illüstrativ foto`}
+              alt={photo.real ? photo.alt : `${photo.alt} — illüstrativ foto`}
             />
             <span>{photo.caption}</span>
           </Reveal>
         ))}
       </div>
       <p className="image-disclosure">
-        Fotolar illüstrativdir və Kafe Sərçənin real məkanını göstərmir.
+        Sərçə stəkanı və fasad fotoları real məkandandır. Orta interyer fotosu
+        illüstrativdir.
       </p>
     </section>
   );
@@ -237,22 +242,18 @@ export function LocationSection() {
         </p>
         <ContactActions />
       </div>
-      <div className="location-note">
-        <PawPrint size={32} />
-        <h3>Dostunu da gətir.</h3>
-        <p>
-          Dördayaqlı dostlar üçün də
-          <br />
-          yerimiz var.
-        </p>
-        <a
-          className="text-link"
-          href={business.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @kafe.serche <ArrowUpRight size={17} />
-        </a>
+      <div className="location-photo">
+        <Image
+          src="/images/serche-exterior-wide.jpg"
+          fill
+          sizes="(max-width:700px) 86vw,42vw"
+          alt="Kafe Sərçənin 28 May ərazisindəki giriş və həyəti"
+        />
+        <div className="location-note">
+          <PawPrint size={25} />
+          <span>Dostunu da gətir · Pet friendly</span>
+        </div>
+        <span className="photo-source">Real məkan · Yandex Maps</span>
       </div>
     </section>
   );

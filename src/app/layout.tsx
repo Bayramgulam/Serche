@@ -30,6 +30,43 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
 };
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  name: business.name,
+  url: business.siteUrl,
+  telephone: business.phoneDisplay,
+  foundingDate: String(business.founded),
+  sameAs: [business.instagram],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Vladislav Plotnikov küçəsi 1",
+    addressLocality: "Bakı",
+    addressCountry: "AZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.coordinates.latitude,
+    longitude: business.coordinates.longitude,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:30",
+      closes: "22:30",
+    },
+  ],
+};
 export default function RootLayout({
   children,
 }: {
@@ -47,13 +84,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CafeOrCoffeeShop",
-              name: business.name,
-              url: business.siteUrl,
-              sameAs: [business.instagram],
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
       </body>

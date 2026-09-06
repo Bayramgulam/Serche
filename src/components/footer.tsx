@@ -9,7 +9,7 @@ export function ContactActions() {
         <Camera size={17} /> Instagram <ArrowUpRight size={15} />
       </a>
       {business.phone ? (
-        <a href={`tel:${business.phone}`}>Zəng et</a>
+        <a href={`tel:${business.phone}`}>Zəng et · {business.phoneDisplay}</a>
       ) : (
         <span>Telefon əlavə olunacaq</span>
       )}

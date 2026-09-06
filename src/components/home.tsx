@@ -38,19 +38,19 @@ export function Hero() {
       <Reveal className="hero-visual">
         <div className="hero-photo">
           <Image
-            src="/images/cafe-interior.jpg"
-            alt="İllüstrativ foto: yaşıl detallı, taxta mebelli kafe interyeri"
+            src="/images/instagram-exterior.jpg"
+            alt="Kafe Sərçənin işıqlı girişi və rəngli stulları"
             fill
             priority
             sizes="(max-width:700px) 90vw,44vw"
           />
-          <span className="photo-label">İllüstrativ foto</span>
+          <span className="photo-label">@kafe.serche</span>
         </div>
         <div className="coffee-polaroid">
           <div>
             <Image
-              src="/images/serche-cup.jpg"
-              alt="Kafe Sərçənin sərçə nişanlı qəhvə stəkanı"
+              src="/images/instagram-coffee.jpg"
+              alt="Sərçənin masasında üç fincan qəhvə"
               fill
               sizes="(max-width:700px) 130px,210px"
             />
@@ -78,12 +78,12 @@ export function AtmosphereSection() {
     <section className="story section" id="haqqimizda">
       <Reveal className="story-photo">
         <Image
-          src="/images/books-table.jpg"
+          src="/images/instagram-atmosphere.jpg"
           fill
           sizes="(max-width:700px) 90vw,40vw"
-          alt="Kitablar və qəhvə ilə taxta masa — illüstrativ foto"
+          alt="Kafe Sərçənin taxta masaları ətrafında qonaqlar"
         />
-        <span className="photo-label">İllüstrativ foto</span>
+        <span className="photo-label">@kafe.serche</span>
         <span className="photo-note">Tələsməyə ehtiyac yoxdur.</span>
       </Reveal>
       <Reveal className="story-copy">
@@ -187,21 +187,21 @@ export function EditorialGallery() {
       <div className="gallery">
         {[
           {
-            src: "serche-cup",
+            src: "instagram-latte",
             caption: "Hər fincanda bir Sərçə",
-            alt: "Kafe Sərçənin sərçə nişanlı qəhvə stəkanı",
+            alt: "Sərçədə südlü qəhvənin hazırlanması",
             real: true,
           },
           {
-            src: "cafe-interior",
+            src: "instagram-coffee",
             caption: "Öz küncünü tap",
-            alt: "Yaşıl kafedə taxta stullar və masalar",
-            real: false,
+            alt: "Sərçənin açıq havadakı masasında üç fincan qəhvə",
+            real: true,
           },
           {
-            src: "serche-exterior",
-            caption: "28 Mayda bizi tap",
-            alt: "Kafe Sərçənin Vladislav Plotnikov küçəsindəki fasadı",
+            src: "instagram-sandwiches",
+            caption: "Söhbətin yanında",
+            alt: "Kafe Sərçənin Instagram paylaşımındakı sendviçlər",
             real: true,
           },
         ].map((photo) => (
@@ -217,8 +217,9 @@ export function EditorialGallery() {
         ))}
       </div>
       <p className="image-disclosure">
-        Sərçə stəkanı və fasad fotoları real məkandandır. Orta interyer fotosu
-        illüstrativdir.
+        <a href={business.instagram} target="_blank" rel="noopener noreferrer">
+          Sərçədən balaca anlar · @kafe.serche ↗
+        </a>
       </p>
     </section>
   );
@@ -244,7 +245,7 @@ export function LocationSection() {
       </div>
       <div className="location-photo">
         <Image
-          src="/images/serche-exterior-wide.jpg"
+          src="/images/instagram-exterior.jpg"
           fill
           sizes="(max-width:700px) 86vw,42vw"
           alt="Kafe Sərçənin 28 May ərazisindəki giriş və həyəti"
@@ -253,7 +254,7 @@ export function LocationSection() {
           <PawPrint size={25} />
           <span>Dostunu da gətir · Pet friendly</span>
         </div>
-        <span className="photo-source">Real məkan · Yandex Maps</span>
+        <span className="photo-source">@kafe.serche</span>
       </div>
     </section>
   );

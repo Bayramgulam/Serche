@@ -25,7 +25,7 @@ Business details were checked on 7 September 2026. The current 28 May location i
 
 ## Photography
 
-The real exterior and branded-cup photographs come from the current Kafe Sərçə Yandex Maps listing and are stored locally rather than hotlinked. Two atmospheric images remain clearly labeled Pexels stock photographs. Replace any third-party photograph with owner-supplied originals when available.
+All displayed photographs now come directly from the official @kafe.serche Instagram profile: exterior, coffee cups, sandwiches, guests and latte preparation. Local copies and responsive WebP variants are used, with exact post attribution in `src/data/photo-sources.ts`. Two images are still covers from the café's reels. The public profile exposes images up to 640px; owner-provided originals would improve large-screen sharpness. Photos do not establish current item availability or prices. Earlier stock and map images are retained in the repository but no longer displayed.
 
 - Current place listing and real photos: https://yandex.az/maps/org/30006629847/
 - Current address, phone and hours corroboration: https://yandex.az/maps/10253/baku/house/YEAYfgNjTEUOQFpqfX95dH5mZQ%3D%3D/

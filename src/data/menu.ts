@@ -43,7 +43,7 @@ export const menu: MenuItem[] = [
     "Kapuçino",
     "Espresso, isti süd və yumşaq süd köpüyü.",
     "qehve",
-    { featured: true, image: "/images/coffee-detail.jpg", allergens: ["Süd"] },
+    { featured: true, allergens: ["Süd"] },
   ),
   item(
     "filter",

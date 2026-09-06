@@ -1,10 +1,28 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+
+const consoleErrors = new WeakMap<Page, string[]>();
+test.beforeEach(async ({ page }) => {
+  const errors: string[] = [];
+  page.on("console", (message) => {
+    if (
+      message.type() === "error" &&
+      !message.text().includes("server responded with a status of 404")
+    )
+      errors.push(message.text());
+  });
+  consoleErrors.set(page, errors);
+});
+test.afterEach(async ({ page }) => {
+  expect(consoleErrors.get(page) ?? []).toEqual([]);
+});
 for (const width of [360, 390, 768, 1024, 1440]) {
   test(`responsive ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     for (const route of ["/", "/menu"]) {
       await page.goto("http://localhost:3000" + route);
+      await page.waitForLoadState("networkidle");
+      await page.waitForTimeout(100);
       await expect(page.locator("h1")).toBeVisible();
       await expect
         .poll(() =>

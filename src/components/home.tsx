@@ -49,8 +49,8 @@ export function Hero() {
         <div className="coffee-polaroid">
           <div>
             <Image
-              src="/images/instagram-coffee.jpg"
-              alt="Sərçənin masasında üç fincan qəhvə"
+              src="/images/instagram-latte.jpg"
+              alt="Südlü qəhvənin stəkana süzülmə anı"
               fill
               sizes="(max-width:700px) 130px,210px"
             />
@@ -78,10 +78,10 @@ export function AtmosphereSection() {
     <section className="story section" id="haqqimizda">
       <Reveal className="story-photo">
         <Image
-          src="/images/instagram-atmosphere.jpg"
+          src="/images/instagram-coffee.jpg"
           fill
           sizes="(max-width:700px) 90vw,40vw"
-          alt="Kafe Sərçənin taxta masaları ətrafında qonaqlar"
+          alt="Sərçənin yaşıl masasında üç fincan qəhvə"
         />
         <span className="photo-label">@kafe.serche</span>
         <span className="photo-note">Tələsməyə ehtiyac yoxdur.</span>
@@ -199,9 +199,9 @@ export function EditorialGallery() {
             real: true,
           },
           {
-            src: "instagram-sandwiches",
-            caption: "Söhbətin yanında",
-            alt: "Kafe Sərçənin Instagram paylaşımındakı sendviçlər",
+            src: "instagram-exterior",
+            caption: "İşığı yanan o künc",
+            alt: "Sərçənin isti işıqlı girişi və rəngli stulları",
             real: true,
           },
         ].map((photo) => (

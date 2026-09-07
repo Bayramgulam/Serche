@@ -25,7 +25,7 @@ Business details were checked on 7 September 2026. The current 28 May location i
 
 ## Photography
 
-All displayed photographs now come directly from the official @kafe.serche Instagram profile: exterior, coffee cups, sandwiches, guests and latte preparation. Local copies and responsive WebP variants are used, with exact post attribution in `src/data/photo-sources.ts`. Two images are still covers from the café's reels. The public profile exposes images up to 640px; owner-provided originals would improve large-screen sharpness. Photos do not establish current item availability or prices. Earlier stock and map images are retained in the repository but no longer displayed.
+Displayed photographs are curated from the official @kafe.serche Instagram profile: the warm exterior, three coffee cups and latte preparation. The crowded sandwich composition and guest portrait are no longer displayed. Local copies and responsive WebP variants are used, with exact post attribution in `src/data/photo-sources.ts`. Two selected images are still covers from the café's reels. The public profile exposes images up to 640px; owner-provided originals would improve large-screen sharpness. Photos do not establish current item availability or prices. Earlier assets are retained in the repository but no longer displayed.
 
 - Current place listing and real photos: https://yandex.az/maps/org/30006629847/
 - Current address, phone and hours corroboration: https://yandex.az/maps/10253/baku/house/YEAYfgNjTEUOQFpqfX95dH5mZQ%3D%3D/

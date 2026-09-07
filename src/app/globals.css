@@ -113,6 +113,13 @@ svg {
   align-items: center;
   gap: 28px;
 }
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
 .wordmark {
   font-family: var(--serif);
   font-size: 39px;
@@ -1016,6 +1023,9 @@ footer {
   }
   .wordmark {
     font-size: 34px;
+  }
+  .brand-logo {
+    height: 44px;
   }
   .button.small {
     font-size: 12px;

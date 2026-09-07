@@ -15,6 +15,6 @@ export const business = {
   founded: 2022,
   coordinates: { latitude: 40.385252, longitude: 49.843509 },
   petFriendly: true,
-  logo: null as string | null,
+  logo: "/images/serche-logo.png" as string | null,
   phrase: "Qaranquş gəldi gedərdi, sən Sərçədən bərk yapış.",
 };
